@@ -23,14 +23,14 @@
         font_size = 12.0,
 		
         color_scheme = "Colorful Colors (terminal.sexy)",
-        window_background_opacity = 0.999,
-        text_background_opacity = 0.999,
+        window_background_opacity = 1.0,
+        text_background_opacity = 1.0,
 
         -- Background Image
         background = {
           {
             source = {
-              File = "/etc/nixos/media/EldenRing1.jpeg",
+              File = "/etc/nixos/media/EldenRing2.jpg",
             },
             opacity = 0.1,
           },
@@ -40,8 +40,9 @@
 		enable_tab_bar = true,
         hide_tab_bar_if_only_one_tab = true,
 
-        -- Enable a scroll bar
+        -- Hide scroll bar when nothing to scroll
         enable_scroll_bar = true,
+		automatically_hide_scrollbar = true,
 
         -- Cursor settings
         cursor_blink_rate = 800,
@@ -51,6 +52,7 @@
         keys = {
           { key="/", mods="CTRL|SHIFT", action=wezterm.action{SplitHorizontal={domain="CurrentPaneDomain"}} },
           { key="-", mods="CTRL|SHIFT", action=wezterm.action{SplitVertical={domain="CurrentPaneDomain"}} },
+		  { key="x", mods="CTRL|SHIFT", action=wezterm.action{CloseCurrentPane={confirm=true}} },
         },
 
         -- Enable GPU Acceleration
