@@ -13,11 +13,10 @@
     ./services.nix
     ./system.nix
     ./nix-settings.nix
-
-    ./modules/home.nix
-
     <home-manager/nixos>
   ];
+  
+  home-manager.users.akotami = import /etc/nixos/modules/home.nix;
 
   system.stateVersion = "24.11"; # Be careful with this one, read the documentation online first!
 }

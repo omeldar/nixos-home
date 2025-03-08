@@ -1,18 +1,41 @@
-{
-  config,
-  pkgs,
-  ...
-}: {
-  home-manager.users.akotami = {
+{ config, pkgs, ... }: {
+
+    home.username = "akotami"; # Add your username
+    home.homeDirectory = "/home/akotami"; # Set the home directory
+    
+	home.enableNixpkgsReleaseCheck = false;
     home.stateVersion = "24.11"; # Match your system's state version
+
+    dconf.settings = {
+        "org/gnome/settings-daemon/plugins/media-keys" = {
+            screenshot = [ "flameshot gui" ];
+        };
+    };
+	
+	# Make sure it starts on startup
+	systemd.user.services.flameshot = {
+        Unit = {
+            Description = "Flameshot Screenshot Tool";
+            After = [ "graphical-session.target" ];
+        };
+
+        Service = {
+            ExecStart = "${pkgs.flameshot}/bin/flameshot";
+            Restart = "always";
+        };
+
+        Install = {
+            WantedBy = [ "default.target" ];
+        };
+    };
 
     # Manage WezTerm Config here
     xdg.configFile."wezterm/wezterm.lua".text = ''
           local wezterm = require 'wezterm'  -- Required for WezTerm to work
 
           return {
-			initial_rows = 23,
-      		initial_cols = 100,
+            initial_rows = 23,
+            initial_cols = 100,
 
             -- Font with fallback options
             font = wezterm.font_with_fallback({
@@ -39,7 +62,7 @@
             },
 
             -- Hide tab bar when only one tab is open
-      		enable_tab_bar = true,
+            enable_tab_bar = true,
             hide_tab_bar_if_only_one_tab = true,
 
             -- Hide scroll bar when nothing to scroll
@@ -55,18 +78,17 @@
               { key="-", mods="CTRL|SHIFT", action=wezterm.action{SplitVertical={domain="CurrentPaneDomain"}} },
               { key="x", mods="CTRL|SHIFT", action=wezterm.action{CloseCurrentPane={confirm=true}} },
             },
-			
-			mouse_bindings = {
-			  {
-				event = { Down = { streak = 1, button = "Right" } },
-				mods = "NONE",
-				action = wezterm.action.PasteFrom("Clipboard"),
-			  },
-			},
 
-            -- Enable GPU Acceleration
-            front_end = "WebGpu",
+            mouse_bindings = {
+              {
+                event = { Down = { streak = 1, button = "Right" } },
+                mods = "NONE",
+                action = wezterm.action.PasteFrom("Clipboard"),
+              },
+            },
+
+            -- Enable GPU Acceleration (Fixed)
+            front_end = "OpenGL",
           }
     '';
-  };
 }

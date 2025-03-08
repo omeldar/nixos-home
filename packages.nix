@@ -13,11 +13,12 @@
     statix
     nix-tree
     nix-template
-    alejandra
+    alejandra # Nix formatter
     notepadqq
     brave
     wezterm
-    vscode
+	vscode
+	flameshot
 
     # entertainment
     discord
