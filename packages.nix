@@ -19,6 +19,7 @@
     alejandra
     notepadqq
     brave
+    wezterm
 
     # entertainment
     discord

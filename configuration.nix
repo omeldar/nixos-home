@@ -13,6 +13,7 @@
     ./services.nix
     ./system.nix
     ./nix-settings.nix
+    <home-manager/nixos>
   ];
 
   system.stateVersion = "24.11"; # Be careful with this one, read the documentation online first!
