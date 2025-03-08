@@ -13,6 +13,9 @@
     ./services.nix
     ./system.nix
     ./nix-settings.nix
+	
+	./modules/home.nix
+	
     <home-manager/nixos>
   ];
 
