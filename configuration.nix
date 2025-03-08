@@ -94,6 +94,9 @@
     liquidctl
     git
     discord
+    statix
+    nix-tree
+    nix-template
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
