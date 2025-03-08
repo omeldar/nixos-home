@@ -17,6 +17,7 @@
     notepadqq
     brave
     wezterm
+    vscode
 
     # entertainment
     discord
