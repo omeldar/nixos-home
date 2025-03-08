@@ -30,7 +30,7 @@
         background = {
           {
             source = {
-              File = "/etc/nixos/media/EldenRing2.jpg",
+              File = "/etc/nixos/media/EldenRing3.jpg",
             },
             opacity = 0.1,
           },
@@ -41,8 +41,7 @@
         hide_tab_bar_if_only_one_tab = true,
 
         -- Hide scroll bar when nothing to scroll
-        enable_scroll_bar = true,
-		automatically_hide_scrollbar = true,
+        enable_scroll_bar = false,
 
         -- Cursor settings
         cursor_blink_rate = 800,
