@@ -12,8 +12,8 @@
     ./networking.nix
     ./packages.nix
     ./desktop.nix
+	./system.nix
     ./services.nix
-    ./system.nix
     ./nix-settings.nix
     <home-manager/nixos>
   ];

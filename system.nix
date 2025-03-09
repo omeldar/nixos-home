@@ -12,6 +12,9 @@
 
   # Automatically clean up old generations
   nix.settings.auto-optimise-store = true;
+  
+  boot.kernelModules = [ "acpi_cpufreq" ];
+  powerManagement.cpuFreqGovernor = "performance";
 
   # Set your time zone.
   time.timeZone = "Europe/Zurich";

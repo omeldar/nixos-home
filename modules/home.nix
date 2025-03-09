@@ -13,8 +13,9 @@
   imports = [
     ./vscode.nix
     ./wezterm.nix
+	./direnv.nix
   ];
-
+  
   dconf.settings = {
     "org/gnome/settings-daemon/plugins/media-keys" = {
       screenshot = ["flameshot gui"];
