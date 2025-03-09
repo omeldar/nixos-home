@@ -3,6 +3,8 @@
   pkgs,
   ...
 }: {
+  nixpkgs.config.allowUnfree = true;
+  
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
@@ -16,7 +18,10 @@
     <home-manager/nixos>
   ];
   
-  home-manager.users.akotami = import /etc/nixos/modules/home.nix;
+  # Configure home-manager
+  home-manager.useGlobalPkgs = true;
+  home-manager.useUserPackages = true;
+  home-manager.users.akotami = import /etc/nixos/modules/home.nix;	# Set config for user akotami
 
   system.stateVersion = "24.11"; # Be careful with this one, read the documentation online first!
 }

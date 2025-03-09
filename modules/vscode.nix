@@ -1,8 +1,4 @@
-{
-  config,
-  pkgs,
-  ...
-}: {
+{ config, pkgs, ... }: {
   programs.vscode = {
     enable = true; # Enable VSCode in Home Manager
 
@@ -10,10 +6,9 @@
     extensions = with pkgs.vscode-extensions; [
       haskell.haskell
       justusadam.language-haskell
-      esbenp.prettier-vscode # Prettier for formatting
-      eamodio.gitlens # GitLens for Git history
-      vscodevim.vim # Vim keybindings
-      sdras.night-owl # Night Owl Theme
+      esbenp.prettier-vscode   # Prettier for formatting
+      eamodio.gitlens          # GitLens for Git history
+      sdras.night-owl          # Night Owl Theme
     ];
 
     # Set VSCode User Settings
@@ -27,8 +22,8 @@
       "files.autoSave" = "afterDelay";
       "editor.minimap.enabled" = true;
       "terminal.integrated.fontSize" = 10;
-      "extensions.autoUpdate" = true;
 
+      # Prefer Project's HLS, but use system fallback
       "haskell.serverExecutablePath" = "\${workspaceFolder}/.nix-profile/bin/haskell-language-server";
       "haskell.serverExecutablePathFallback" = "${pkgs.haskell-language-server}/bin/haskell-language-server";
     };

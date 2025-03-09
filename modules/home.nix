@@ -3,6 +3,7 @@
   pkgs,
   ...
 }: {
+  nixpkgs.config.allowUnfree = true;
   home.username = "akotami"; # Add your username
   home.homeDirectory = "/home/akotami"; # Set the home directory
 
@@ -10,7 +11,7 @@
   home.stateVersion = "24.11"; # Match your system's state version
 
   imports = [
-    # ./vscode.nix
+    ./vscode.nix
     ./wezterm.nix
   ];
 

@@ -19,9 +19,13 @@
     wezterm
 	vscode
 	flameshot
+	direnv
 
     # entertainment
     discord
     spotify
+	
+	# Add Haskell Language Server (system-wide for fallback)
+	haskell-language-server
   ];
 }
