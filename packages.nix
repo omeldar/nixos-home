@@ -20,6 +20,12 @@
 	vscode
 	flameshot
 	direnv
+	
+	# VMs
+	virt-manager
+	qemu
+	libvirt
+	virt-viewer
 
     # entertainment
     discord

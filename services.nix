@@ -26,4 +26,5 @@
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
+  virtualisation.libvirtd.enable = true;
 }
