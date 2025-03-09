@@ -20,6 +20,9 @@
 	vscode
 	flameshot
 	direnv
+	p7zip
+	zip
+	unzip
 	
 	# VMs
 	virt-manager
