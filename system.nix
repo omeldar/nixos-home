@@ -16,6 +16,9 @@
   boot.kernelModules = [ "acpi_cpufreq" ];
   powerManagement.cpuFreqGovernor = "performance";
 
+  services.xserver.videoDrivers = [ "nvidia" ];
+  hardware.nvidia.open = true;
+
   # Set your time zone.
   time.timeZone = "Europe/Zurich";
 
