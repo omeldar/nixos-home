@@ -12,7 +12,7 @@
     ./networking.nix
     ./packages.nix
     ./desktop.nix
-	./system.nix
+	  ./system.nix
     ./services.nix
     ./nix-settings.nix
     <home-manager/nixos>

@@ -13,7 +13,7 @@
   imports = [
     ./vscode.nix
     ./wezterm.nix
-	./direnv.nix
+	  ./direnv.nix
   ];
   
   dconf.settings = {
@@ -24,18 +24,19 @@
 
   # Make sure it starts on startup
   systemd.user.services.flameshot = {
-    Unit = {
-      Description = "Flameshot Screenshot Tool";
-      After = ["graphical-session.target"];
-    };
-
-    Service = {
-      ExecStart = "${pkgs.flameshot}/bin/flameshot";
-      Restart = "always";
-    };
-
-    Install = {
-      WantedBy = ["default.target"];
-    };
+  Unit = {
+    Description = "Flameshot Screenshot Tool";
+    After = ["graphical-session.target"];
   };
+
+  Service = {
+    ExecStart = "${pkgs.flameshot}/bin/flameshot";
+    Restart = "always";
+    ExecStartPost = "${pkgs.flameshot}/bin/flameshot --tray"; # Start in tray mode
+  };
+
+  Install = {
+    WantedBy = ["default.target"];
+  };
+};
 }
