@@ -26,7 +26,7 @@
       "editor.formatOnSave" = true;
       "files.autoSave" = "afterDelay";
       "editor.minimap.enabled" = true;
-      "terminal.integrated.fontSize" = 10;
+      "terminal.integrated.fontSize" = 14;
       "git.autofetch" = true;
 
       "terminal.integrated.defaultProfile.linux" = "bash";
