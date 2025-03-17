@@ -27,11 +27,16 @@
       "files.autoSave" = "afterDelay";
       "editor.minimap.enabled" = true;
       "terminal.integrated.fontSize" = 10;
-
       "git.autofetch" = true;
+
       "terminal.integrated.defaultProfile.linux" = "bash";
 
-      # Haskell Language Server Paths
+      "terminal.integrated.profiles.linux" = {
+        "bash" = {
+          "path" = "/run/current-system/sw/bin/bash";
+        };
+      };
+
       "haskell.serverExecutablePath" = "/nix/store/hdijzd8md5nx54q9qy13yf36h9zlr78m-haskell-language-server-2.9.0.0/bin/haskell-language-server";
       "haskell.serverExecutablePathFallback" = "${pkgs.haskell-language-server}/bin/haskell-language-server";
     };
