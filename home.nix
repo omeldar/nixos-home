@@ -11,11 +11,11 @@
   home.stateVersion = "24.11"; # Match your system's state version
 
   imports = [
-    ./vscode.nix
-    ./wezterm.nix
-	  ./direnv.nix
+    ./modules/vscode.nix
+    ./modules/wezterm.nix
+    ./modules/direnv.nix
   ];
-  
+
   dconf.settings = {
     "org/gnome/settings-daemon/plugins/media-keys" = {
       screenshot = ["flameshot gui"];
@@ -24,19 +24,19 @@
 
   # Make sure it starts on startup
   systemd.user.services.flameshot = {
-  Unit = {
-    Description = "Flameshot Screenshot Tool";
-    After = ["graphical-session.target"];
-  };
+    Unit = {
+      Description = "Flameshot Screenshot Tool";
+      After = ["graphical-session.target"];
+    };
 
-  Service = {
-    ExecStart = "${pkgs.flameshot}/bin/flameshot";
-    Restart = "always";
-    ExecStartPost = "${pkgs.flameshot}/bin/flameshot --tray"; # Start in tray mode
-  };
+    Service = {
+      ExecStart = "${pkgs.flameshot}/bin/flameshot";
+      Restart = "always";
+      ExecStartPost = "${pkgs.flameshot}/bin/flameshot --tray"; # Start in tray mode
+    };
 
-  Install = {
-    WantedBy = ["default.target"];
+    Install = {
+      WantedBy = ["default.target"];
+    };
   };
-};
 }

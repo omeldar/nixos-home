@@ -1,14 +1,13 @@
+{ config, pkgs, ... }:
+
 {
-  config,
-  pkgs,
-  ...
-}: {
   users.users.akotami = {
     isNormalUser = true;
+    home = "/home/akotami";
     description = "akotami";
-    extraGroups = ["networkmanager" "wheel"];
-    packages = with pkgs; [
-      #  thunderbird
-    ];
+    extraGroups = [ "networkmanager" "wheel" "nordvpn" ];
+    group = "akotami";
   };
+
+  users.groups.akotami = {};
 }

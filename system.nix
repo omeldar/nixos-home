@@ -12,11 +12,11 @@
 
   # Automatically clean up old generations
   nix.settings.auto-optimise-store = true;
-  
-  boot.kernelModules = [ "acpi_cpufreq" ];
+
+  boot.kernelModules = ["acpi_cpufreq"];
   powerManagement.cpuFreqGovernor = "performance";
 
-  services.xserver.videoDrivers = [ "nvidia" ];
+  services.xserver.videoDrivers = ["nvidia"];
   hardware.nvidia.open = true;
 
   # Set your time zone.

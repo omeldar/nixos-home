@@ -1,6 +1,10 @@
-{ config, pkgs, ... }: {
+{
+  config,
+  pkgs,
+  ...
+}: {
   programs.direnv = {
     enable = true;
-    nix-direnv.enable = true;  # Enables integration with Nix
+    nix-direnv.enable = true; # Enables integration with Nix
   };
 }

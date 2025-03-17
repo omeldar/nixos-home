@@ -17,24 +17,29 @@
     notepadqq
     brave
     wezterm
-	vscode
-	flameshot
-	direnv
-	p7zip
-	zip
-	unzip
-	
-	# VMs
-	virt-manager
-	qemu
-	libvirt
-	virt-viewer
+    vscode
+    flameshot
+    direnv
+    p7zip
+    zip
+    unzip
+
+    # VMs
+    virt-manager
+    qemu
+    libvirt
+    virt-viewer
+
+    # VPN
+    openvpn
+    networkmanager-openvpn
+    openresolv
 
     # entertainment
     discord
     spotify
-	
-	# Add Haskell Language Server (system-wide for fallback)
-	haskell-language-server
+
+    # Add Haskell Language Server (system-wide for fallback)
+    haskell-language-server
   ];
 }
