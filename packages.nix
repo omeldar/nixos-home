@@ -18,11 +18,15 @@
     brave
     wezterm
     vscode
-    flameshot
     direnv
     p7zip
     zip
     unzip
+
+    # Flameshot & Dependencies (for screenshot tool)
+    flameshot
+    gnome-themes-extra  # Provides Adwaita theme
+    gtk_engines
 
     # VMs
     virt-manager
