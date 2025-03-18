@@ -25,7 +25,7 @@
 
     # Flameshot & Dependencies (for screenshot tool)
     flameshot
-    gnome-themes-extra  # Provides Adwaita theme
+    gnome-themes-extra # Provides Adwaita theme
     gtk_engines
 
     # VMs

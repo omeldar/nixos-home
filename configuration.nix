@@ -18,7 +18,7 @@
     <home-manager/nixos>
   ];
 
-  users.groups.akotami = {}; 
+  users.groups.akotami = {};
 
   # Configure home-manager
   home-manager.useGlobalPkgs = true;

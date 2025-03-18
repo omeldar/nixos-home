@@ -1,11 +1,13 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   users.users.akotami = {
     isNormalUser = true;
     home = "/home/akotami";
     description = "akotami";
-    extraGroups = [ "networkmanager" "wheel" "nordvpn" ];
+    extraGroups = ["networkmanager" "wheel" "nordvpn"];
     group = "akotami";
   };
 
