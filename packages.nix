@@ -22,6 +22,7 @@
     p7zip
     zip
     unzip
+    imagemagick
 
     # Flameshot & Dependencies (for screenshot tool)
     flameshot

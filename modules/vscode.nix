@@ -14,6 +14,7 @@
       eamodio.gitlens # GitLens for Git history
       sdras.night-owl # Night Owl Theme
       bbenoist.nix # Nix language support
+      mkhl.direnv
     ];
 
     # Set VSCode User Settings
