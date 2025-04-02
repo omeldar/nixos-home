@@ -15,10 +15,25 @@
       sdras.night-owl # Night Owl Theme
       bbenoist.nix # Nix language support
       mkhl.direnv
+      james-yu.latex-workshop
     ];
 
     # Set VSCode User Settings
     userSettings = {
+      "latex-workshop.message.error.show" = false;
+      "latex-workshop.message.warning.show" = false;
+      "latex-workshop.message.information.show" = false;
+
+      # Formatting control
+      "latex-workshop.latexindent.enabled" = true;
+      "latex-workshop.latex.formatter" = "latexindent";
+      "latex-workshop.latexindent.path" = "latexindent";
+      "latex-workshop.latexindent.args" = [ "-l" ];
+
+      "[latex]" = {
+        "editor.defaultFormatter" = "James-Yu.latex-workshop";
+      };
+
       "editor.fontSize" = 12;
       "editor.fontFamily" = "Fira Code, JetBrains Mono, Consolas, 'Courier New', monospace";
       "editor.tabSize" = 4;

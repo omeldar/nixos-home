@@ -35,6 +35,10 @@
     libvirt
     virt-viewer
 
+    # LaTex support
+    texlive.combined.scheme-full
+    tectonic  # modern CLI builder (faster, minimal)
+
     # VPN
     openvpn
     networkmanager-openvpn
