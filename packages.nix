@@ -19,9 +19,14 @@
     wezterm
     vscode
     direnv
+
+    # Compressing and decrompressing files
     p7zip
     zip
     unzip
+    unrar
+
+    # Converting image formats to different formats
     imagemagick
 
     # Flameshot & Dependencies (for screenshot tool)
